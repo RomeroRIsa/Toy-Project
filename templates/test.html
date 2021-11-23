@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+<head>
+<style>
+h1 {text-align: center;}
+.button {
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: 16px;
+  margin: 0 auto;
+  cursor: pointer;
+  transition-duration: 0.4s;
+}
+.button1 {
+  background-color: white;
+  color: black;
+  border: 2px solid #555555;
+}
+.button1:hover {
+  background-color: #555555;
+  color: white;
+}
+.center{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+.select{
+  font-family: verdana;
+  border: none;
+  color: black;
+  font-size: 18px
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+.image {
+    flex-basis: 37%;
+    padding-top:200px;
+    padding-bottom:190px;
+    padding-left:20px;
+}
+.text {
+    font-size: 20px;
+    text-align:left;
+    padding-right:200px;
+}
+.secondtext{
+    font-size: 20px;
+    text-align:right;
+    padding-left:200px;
+    font-family:verdana;
+}
+
+</style>
+</head>
+
+<body>
+  <h1 style="font-family:verdana">My Simulator</h1>
+  <form action="/data" method="post">
+    <button class="button button1" type="submit">Run</button>
+  
+  <br>
+  <div class="container">
+    <div class="text">
+        <b><label style="font-size:24px;font-family:verdana">Configuration</label></b><br><br>
+        <label for="distributions" style="font-family:verdana;font-size:16px">Distribution to simulate:</label>
+        <br>
+        <select name="distributions" id="distributions">
+            <option value="uniform">Uniform</option>
+            <option value="normal">Normal</option>
+            <option value="normal_student">Normal with input</option>
+        </select>
+        <br><br>
+        <div class="mean">
+            <label for="mean" style="font-family:verdana;font-size:16px">Mean:</label><br>
+            <input name="mean" type="text"  placeholder=""/>
+        </div>
+        <br>
+        <div class="std">
+            <label for="std" style="font-family:verdana;font-size:16px">Standard Deviation:</label><br>
+            <input name="std" type="text" placeholder=""/>
+        </div>
+    </form>
+    </div>
+    <div class="image">
+        <img src="/static/University_of_Illinois_at_Urbana–Champaign_logo.svg.png" width="90%">
+    </div>
+    <div class="secondtext">
+        <b><label>Profile:</label></b><br><br><br>
+        <label>Simulation Time:</label>
+    </div>
+  </div>
+  
+    
+</body>
